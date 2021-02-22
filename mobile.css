@@ -1,0 +1,16 @@
+@media (max-width: 500px) {
+  footer {
+    align-self: center;
+    max-width: 100vh;
+    max-height: 100vh;
+    font-size: 0.6rem;
+  }
+
+  nav ul li{
+      font-size: 0.8rem;
+  }
+
+  .container.show-nav {
+    transform: rotate(-40deg); /* Sayfayı, saat yönünün tersine 20 derece eğdik */
+  }
+}

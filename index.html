@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <title>Rotating Landing Page</title>
+</head>
+
+<body>
+    <a name="top"></a>
+
+    <div class="container">
+        <!-- Left Top Circle X & Hamburger Button -->
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+            </div>
+        </div>
+
+        <!-- Context of a Page -->
+        <div class="content">
+            <h1>Nedir bu Constructor Method ? — Javascript OOP</h1>
+            <small>Oğuzhan YÜKSEL</small>
+            <img id="image1" src="images/jsmain.jpg" alt="Javascript - OOP">
+            <p>Rutin olarak tekrar ettiğimiz çoğu iş için “ Keşke daha basit bir yolu olsa.” ya da “ Eee iyi de ben
+                bunun aynısı zaten yapmıştım ? Neden tekrar tekrar her seferinde baştan aynı şeyi yapayım ki ? “
+                dediğimiz çok fazla zaman olmuştur.</p>
+            <p>
+                Gerçek hayattan örnek vermek gerekirse, odamızda bulunan ışığı açmak için her gün aynı pozisyonda
+                bulunan düğmeyi kullanıyoruz. Ancak bu düğme, yaşadığımız daire yapılırken orada değildi. Yani en başta
+                bu iş 1 kere yapıldı, düğme yerine yerleştirildi, gerekli elektrik bağlantıları yapıldı ve evet (
+                Örneğimizde 2 duy ile çalışan bir düzenek olduğunu varsayalım.) işte o iki ışığı açan iki düğme
+                yıllardır orada. Eğer ortamda daha fazla ışığa ihtiyaç varsa 2 düğmeyi aktifleştiriyoruz, değilse 1
+                tanesini.</p>
+            <p>
+                Bir de bunun aksini düşünelim. Her akşam ışığı çalışır hale getirebilmek için henüz hava kararmadan
+                gidip düğme satın alıyorsunuz, eve gelince düğmelerin önce elektrik aksamını birleştiriyor, ardından
+                duvara gerekli montajı yapıyorsunuz. Duy ve lamba kısmından bahsetmiyorum bile…
+                İşte bu durumun aynısı yazılımda da geçerli. Aynı işi tekrar etmek için kullanabileceğimiz, gerekli
+                durumda da miktar gibi farklı değişkenleri değiştirebileceğimiz bir yapı bu Constructor yani Yapıcı
+                Metotlar.</p>
+
+            <h3>Grocery → Yapıcı Metodumuzun adı, BÜYÜK HARF İLE BAŞLAMALI!</h3>
+            <img src="images/image1.jpg" alt="Yapıcı Metot-1">
+
+            <p>Detay 1: Örnekte görüleceği üzere, yapıcı metotları aynı fonksiyonlar gibi tanımlıyoruz. Tek farkla,
+                metodumuzun adı Büyük Harf ile başlamalı. Zaten küçük ile başlarsa fonksiyon oluyor. Büyük olunca da
+                Yapıcı Metot.
+            </p>
+            <p>
+                Detay 2: Normalde yani Global Scopeta “ this “ anahtar kelimesi bize WINDOW’u karşılıyor. Ancak burada
+                görüldüğü üzere this anahtar kelimesi, içinde bulunduğu function’ı tanımlıyor.
+            </p>
+            <p>
+                Detay 3: Kırmızı ile birbirini işaret eden kelimelere dikkat edin.
+                this.fruit = fruit;
+                this.veg = veg;
+                this.fish = fish;
+            </p>
+            Burada kafanız karışmasın. Neden 2 adet fish, veg, fruit vs kullandık ?
+            + 1.fish bizim kendi kullanımımız için atadığımız isim. ( Burada fish yerine x,y,z veya sen,ben,o gibi
+            istediğimiz değeri atayabilirdik. )
+            + 2.fish ise ( yani kırmızı dikdörtgen içinde olanlar ) yapıcı metoda ait olan değer. Parantez içindeki
+            ve eşittirin sağındaki değerler aynı olmalı.
+            </p>
+            <p>
+                Bu kısımda, lamba örneğimize atıf yaparsak, dairenin ilk inşaat aşamasında priz gerekli yere montaj
+                edildi. Artık özgürce istediğimiz kadar kullanabiliriz. Ama hangi sıklıkla ? 2 ışık birden mi açık
+                olacak ? Yoksa tek ışık mı ?
+            </p>
+            <h3>Atama yaparken “new” anahtar kelimesi ile yapıcı metodu çağırıyoruz.</h3>
+            <img src="images/image2.jpg" alt="Yapıcı Metot-2">
+            <p>Daha önceden oluşturduğumuz yapıcı metoda ilerde kullanabilmek için bazı özellikler tanımlıyoruz. Mavi
+                dikdörtgen içinde atama sırasına göre hangi değerin, hangi değişkeni referans aldığını görebilirsiniz.
+
+            </p>
+            <p> Durumu içselleştirebilmek adına burada da iki adet duy’umuza istediğimiz 2 renkte lamba taktığımızı
+                düşünebiliriz :) Biri sarı, diğeri beyaz olsun. Şu an her şey hazır. Priz, elektrik aksamı, duy,
+                lambalar. Geriye yalnızca ışığı yakmak kaldı.
+            </p>
+            <p>
+                Bu örnekte basit bir console.log() fonksiyonu ile ışığımızı yaktığımızı düşünebilirsiniz. Ancak pek
+                tabii kullanım alanı bizlere kalmış…
+                Kod, müzik ve sağlıkla kalın :)
+            </p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+
+            <li><i class="fas fa-search"></i><a
+                    href="https://oguzyuksel92.medium.com/nedir-bu-constructor-method-javascript-oop-6f2df703d154"
+                    target="_blank">MAKALEYE GİT</a> </li>
+            <li><i class="fas fa-home"></i>Ana Sayfa</li>
+            <li><i class="fas fa-user-alt"></i>Hakkımda</li>
+            <li><i class="fas fa-envelope"></i>İLETİŞİM</li>
+            <li><a href="#top"><i class="fas fa-arrow-alt-circle-up"></i></a>Başa Dön</li>
+        </ul>
+
+    </nav>
+
+    <footer>
+        <h3>
+            Made with 🎧 & ❤️ by <span style="text-decoration: underline;">Oğuzhan YÜKSEL </span> </h3>
+        <ul>
+            <a href="https://www.linkedin.com/in/oguzhan-yuksel-942a62201/" target="_blank"><i
+                    class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://oguzyuksel92.medium.com/" target="_blank"><i class="fab fa-medium fa-2x"></i></a>
+        </ul>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
